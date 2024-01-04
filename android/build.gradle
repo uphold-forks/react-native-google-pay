@@ -1,30 +1,27 @@
-
 buildscript {
-    repositories {
-        jcenter()
-        google()
-    }
+  repositories {
+    jcenter()
+    google()
+  }
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
-    }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:7.3.1'
+  }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+  buildToolsVersion = "33.0.0"
+  compileSdkVersion = 33
 
-    defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-    }
-    lintOptions {
-        abortOnError false
-    }
+  defaultConfig {
+    minSdkVersion 23
+    targetSdkVersion 33
+  }
+  lintOptions {
+    abortOnError false
+  }
 }
 
 repositories {
@@ -33,8 +30,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
-    implementation 'com.google.android.gms:play-services-wallet:16.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+  implementation 'com.facebook.react:react-native:+'
+  implementation 'com.google.android.gms:play-services-wallet:19.2.1'
+  implementation 'androidx.appcompat:appcompat:1.6.1'
 }
-  
